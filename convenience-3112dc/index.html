@@ -1,320 +1,247 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>יאלי בשכונה | מכולת שכונתית ברמת גן — שפירא 3</title>
-  <meta name="description" content="יאלי בשכונה — מכולת שכונתית ברחוב שפירא 3 רמת גן. מוצרי יסוד, חטיפים ומוצרי בית בשירות אישי וחם. התקשרו: 03-673-1983">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#E07A2F',
-            secondary: '#5C8A4E',
-            accent: '#F2B441',
-            cream: '#FBF6EE',
-            ink: '#3A2E25'
-          },
-          fontFamily: {
-            heebo: ['Heebo', 'sans-serif']
-          }
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>יאלי בשכונה — מכולת שכונתית ברמת גן</title>
+<meta name="description" content="יאלי בשכונה — מכולת שכונתית ברחוב שפירא 3 רמת גן. מוצרי יסוד, חטיפים ומוצרי בית בשירות אישי וחם. התקשרו: 03-673-1983">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Secular+One&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        brand:  '#E07A2F',
+        leaf:   '#5C8A4E',
+        sun:    '#F2B441',
+        cream:  '#FBF6EE',
+        coffee: '#3A2E25'
+      },
+      fontFamily: {
+        heading: ['"Secular One"', 'sans-serif'],
+        body: ['Heebo', 'sans-serif']
       }
     }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Heebo', sans-serif; }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes floaty {
-      0%, 100% { transform: translateY(0); }
-      50%      { transform: translateY(-10px); }
-    }
-    @keyframes pulseSoft {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(224, 122, 47, 0.45); }
-      70%      { box-shadow: 0 0 0 14px rgba(224, 122, 47, 0); }
-    }
-    @keyframes wiggle {
-      0%, 100% { transform: rotate(0deg); }
-      25%      { transform: rotate(-6deg); }
-      75%      { transform: rotate(6deg); }
-    }
-    .anim-fade-up   { animation: fadeUp 0.9s ease-out both; }
-    .anim-delay-1   { animation-delay: 0.15s; }
-    .anim-delay-2   { animation-delay: 0.3s; }
-    .anim-delay-3   { animation-delay: 0.45s; }
-    .anim-float     { animation: floaty 4s ease-in-out infinite; }
-    .anim-pulse-cta { animation: pulseSoft 2.5s ease-out infinite; }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
-    }
-    /* CSS-only scroll reveal via animation-timeline fallback: use simple always-on entrance for broad support */
-    @media (prefers-reduced-motion: no-preference) {
-      @supports (animation-timeline: view()) {
-        .reveal {
-          opacity: 1;
-          transform: none;
-          animation: fadeUp 0.9s ease-out both;
-          animation-timeline: view();
-          animation-range: entry 0% entry 45%;
-        }
-      }
-      @supports not (animation-timeline: view()) {
-        .reveal { opacity: 1; transform: none; animation: fadeUp 0.9s ease-out both; }
-      }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .reveal, .anim-fade-up, .anim-float, .anim-pulse-cta { animation: none !important; opacity: 1; transform: none; }
-    }
-
-    .card-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-    .card-lift:hover { transform: translateY(-6px); box-shadow: 0 18px 35px -12px rgba(58, 46, 37, 0.25); }
-    .card-lift:hover .service-icon { animation: wiggle 0.5s ease-in-out; }
-
-    .gallery-tile { transition: transform 0.35s ease; }
-    .gallery-tile:hover { transform: scale(1.04); }
-  </style>
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Heebo', sans-serif; }
+  .dots-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Ccircle cx='2' cy='2' r='1.5' fill='%23E07A2F' fill-opacity='0.13'/%3E%3C/svg%3E");
+  }
+  .lines-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpath d='M0 39h40' stroke='%235C8A4E' stroke-opacity='0.12' stroke-width='1'/%3E%3C/svg%3E");
+  }
+  .hero-photo {
+    background-image:
+      linear-gradient(rgba(58,46,37,0.08), rgba(58,46,37,0.22)),
+      url('https://images.unsplash.com/photo-1542838132-92c53300491e?w=1600&q=80');
+    background-size: cover;
+    background-position: center;
+    background-color: #5C8A4E;
+  }
+</style>
 </head>
-<body class="bg-cream text-ink antialiased">
+<body class="bg-cream text-coffee antialiased">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-cream/90 backdrop-blur border-b border-primary/15">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#hero" class="flex items-center gap-2 font-extrabold text-xl text-ink">
-        <span class="text-2xl" aria-hidden="true">🛒</span>
-        <span>יאלי <span class="text-primary">בשכונה</span></span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 font-medium text-sm">
-        <a href="#about" class="hover:text-primary transition-colors">מי אנחנו</a>
-        <a href="#services" class="hover:text-primary transition-colors">מה תמצאו אצלנו</a>
-        <a href="#gallery" class="hover:text-primary transition-colors">הצצה לחנות</a>
-        <a href="#testimonials" class="hover:text-primary transition-colors">שכנים ממליצים</a>
-        <a href="#contact" class="hover:text-primary transition-colors">צרו קשר</a>
-      </nav>
-      <a href="tel:+97236731983" class="bg-primary hover:bg-primary/90 text-white text-sm font-bold px-4 py-2 rounded-full transition-colors">
-        📞 03-673-1983
+<!-- ניווט -->
+<header class="sticky top-0 z-50 bg-cream/95 backdrop-blur border-b-2 border-brand/20">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
+    <a href="#top" class="flex items-center gap-3 shrink-0">
+      <svg width="40" height="40" viewBox="0 0 48 48" aria-hidden="true">
+        <rect x="2" y="2" width="44" height="44" rx="10" fill="#E07A2F"/>
+        <rect x="2" y="2" width="44" height="44" rx="10" fill="none" stroke="#3A2E25" stroke-opacity="0.15" stroke-width="1.5"/>
+        <text x="24" y="33" text-anchor="middle" font-family="'Secular One', sans-serif" font-size="26" fill="#FBF6EE">י</text>
+      </svg>
+      <span class="font-heading text-xl leading-none">יאלי בשכונה</span>
+    </a>
+    <nav class="hidden sm:flex items-center gap-6 text-sm font-medium">
+      <a href="#about" class="hover:text-brand transition-colors">אודות</a>
+      <a href="#services" class="hover:text-brand transition-colors">מה תמצאו</a>
+      <a href="#location" class="hover:text-brand transition-colors">איך מגיעים</a>
+      <a href="#contact" class="hover:text-brand transition-colors">יצירת קשר</a>
+    </nav>
+    <a href="tel:+97236731983" class="flex items-center gap-2 bg-leaf text-cream px-4 py-2 text-sm font-medium hover:bg-leaf/90 transition-colors">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span class="hidden md:inline">03-673-1983</span>
+      <span class="md:hidden">חיוג</span>
+    </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="top" class="dots-pattern">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-10 lg:gap-14 items-center py-14 lg:py-20">
+    <div>
+      <p class="inline-block bg-sun/30 border-r-4 border-brand px-3 py-1 text-sm font-medium mb-5">מכולת שכונתית · רחוב שפירא, רמת גן</p>
+      <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5">המכולת שמרגישה<br>כמו בית</h1>
+      <p class="text-lg leading-relaxed text-coffee/80 max-w-md mb-8">כל מה שצריך ליום-יום — מוצרי יסוד טריים, חטיפים ומוצרי בית — במרחק הליכה מהבית, עם שירות שמכיר אתכם בשם.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="tel:+97236731983" class="flex items-center gap-2 bg-brand text-cream px-6 py-3 font-medium hover:bg-brand/90 transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          התקשרו אלינו
+        </a>
+        <a href="https://wa.me/97236731983" class="flex items-center gap-2 border-2 border-leaf text-leaf px-6 py-3 font-medium hover:bg-leaf hover:text-cream transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          שלחו וואטסאפ
+        </a>
+      </div>
+      <div class="flex items-center gap-2 mt-8 text-sm text-coffee/70">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>שפירא 3, רמת גן</span>
+      </div>
+    </div>
+    <div class="relative">
+      <div class="hero-photo h-72 sm:h-96 lg:h-[480px] w-full" role="img" aria-label="מדפי ירקות ופירות טריים במכולת"></div>
+      <div class="absolute -bottom-3 -right-3 w-full h-full border-2 border-brand -z-10 hidden sm:block" aria-hidden="true"></div>
+      <div class="absolute bottom-4 right-4 bg-cream px-4 py-3 border-r-4 border-sun">
+        <p class="font-heading text-lg leading-tight">קרוב לבית.<br>תמיד.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- אודות -->
+<section id="about" class="bg-white border-y border-coffee/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 lg:py-20 grid lg:grid-cols-5 gap-10 items-start">
+    <div class="lg:col-span-3">
+      <h2 class="font-heading text-3xl sm:text-4xl mb-5">המכולת של השכונה</h2>
+      <p class="text-lg leading-relaxed text-coffee/80">יאלי בשכונה היא המכולת השכונתית שלכם ברחוב שפירא ברמת גן. אצלנו תמצאו את כל מה שצריך ליום-יום — ממוצרי יסוד טריים ועד חטיפים ומוצרי בית — בשירות אישי וחם שמכיר כל לקוח בשם. אנחנו כאן בשבילכם, קרוב לבית, בכל שעה שתצטרכו.</p>
+    </div>
+    <div class="lg:col-span-2 bg-leaf text-cream p-7 lines-pattern">
+      <h3 class="font-heading text-xl mb-5">בקצרה</h3>
+      <ul class="space-y-4 text-sm">
+        <li class="flex items-start gap-3">
+          <svg class="shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>שפירא 3, רמת גן — בלב השכונה, במרחק הליכה</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>03-673-1983 — מתקשרים, שואלים, ואנחנו שומרים בצד</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="shrink-0 mt-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14a4.5 4.5 0 0 0 7 0"/><path d="M9 9.5h.01"/><path d="M15 9.5h.01"/></svg>
+          <span>שירות אישי — מכירים כל לקוח בשם</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- מה תמצאו -->
+<section id="services" class="dots-pattern">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 lg:py-20">
+    <div class="max-w-xl mb-10">
+      <h2 class="font-heading text-3xl sm:text-4xl mb-3">מה תמצאו אצלנו</h2>
+      <p class="text-coffee/70">כל הבסיס של הבית, מרוכז במקום אחד קרוב אליכם.</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="bg-white border-t-4 border-brand p-6">
+        <div class="w-12 h-12 bg-brand/10 text-brand flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 9h15l-1.4 9.6a2 2 0 0 1-2 1.7H7.9a2 2 0 0 1-2-1.7L4.5 9z"/><path d="M9 9l3-5.5L15 9"/><path d="M9.5 13v3.5"/><path d="M14.5 13v3.5"/></svg>
+        </div>
+        <h3 class="font-heading text-lg mb-2">מוצרי יסוד יומיומיים</h3>
+        <p class="text-sm leading-relaxed text-coffee/70">חלב, לחם, ביצים וכל מה שצריך בבית — תמיד טרי ותמיד זמין.</p>
+      </div>
+      <div class="bg-white border-t-4 border-sun p-6">
+        <div class="w-12 h-12 bg-sun/15 text-brand flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4"/><path d="M11 2v3.5l-2.9 4.1a3 3 0 0 0-.6 1.8V19a2 2 0 0 0 2 2h5a2 2 0 0 0 2-2v-7.6a3 3 0 0 0-.6-1.8L13 5.5V2"/><path d="M7.5 14h9"/></svg>
+        </div>
+        <h3 class="font-heading text-lg mb-2">חטיפים ושתייה</h3>
+        <p class="text-sm leading-relaxed text-coffee/70">מבחר רחב של חטיפים, שתייה קרה וגלידות לכל המשפחה.</p>
+      </div>
+      <div class="bg-white border-t-4 border-leaf p-6">
+        <div class="w-12 h-12 bg-leaf/10 text-leaf flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 10h6v9a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-9z"/><path d="M8.5 10V7a2 2 0 0 1 2-2h.5V3h3"/><path d="M17 5h.01"/><path d="M19.5 7.5h.01"/><path d="M18 10.5h.01"/></svg>
+        </div>
+        <h3 class="font-heading text-lg mb-2">מוצרי ניקיון וטואלטיקה</h3>
+        <p class="text-sm leading-relaxed text-coffee/70">כל מוצרי הבית הבסיסיים במרחק הליכה מהבית.</p>
+      </div>
+      <div class="bg-white border-t-4 border-brand p-6">
+        <div class="w-12 h-12 bg-brand/10 text-brand flex items-center justify-center mb-4">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8.5 14a4.5 4.5 0 0 0 7 0"/><path d="M9 9.5h.01"/><path d="M15 9.5h.01"/></svg>
+        </div>
+        <h3 class="font-heading text-lg mb-2">שירות שכונתי אישי</h3>
+        <p class="text-sm leading-relaxed text-coffee/70">מכירים אתכם בשם, שומרים לכם בצד, ותמיד מקבלים בחיוך.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- מיקום -->
+<section id="location" class="bg-white border-y border-coffee/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 lg:py-20 grid lg:grid-cols-5 gap-10 items-center">
+    <div class="lg:col-span-2">
+      <h2 class="font-heading text-3xl sm:text-4xl mb-5">איך מגיעים</h2>
+      <div class="flex items-start gap-3 mb-4">
+        <svg class="shrink-0 mt-1 text-brand" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <p class="font-medium">רחוב שפירא 3, רמת גן</p>
+          <p class="text-sm text-coffee/70">בלב השכונה, נוח להגעה ברגל</p>
+        </div>
+      </div>
+      <a href="https://www.google.com/maps/dir/?api=1&destination=32.0814751,34.8048527" class="inline-flex items-center gap-2 bg-leaf text-cream px-5 py-3 font-medium hover:bg-leaf/90 transition-colors mt-2">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-8-8 19-2.5-8.5L3 11z"/></svg>
+        פתח בניווט
       </a>
     </div>
-  </header>
+    <div class="lg:col-span-3 border-2 border-coffee/15">
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=34.80085%2C32.07748%2C34.80885%2C32.08548&layer=mapnik&marker=32.08148%2C34.80485" style="border:0;width:100%;height:320px" loading="lazy" title="מפת הגעה"></iframe>
+    </div>
+  </div>
+</section>
 
-  <!-- Hero -->
-  <section id="hero" class="relative overflow-hidden">
-    <div class="absolute -top-16 -left-16 w-72 h-72 bg-accent/30 rounded-full blur-3xl" aria-hidden="true"></div>
-    <div class="absolute -bottom-20 -right-10 w-80 h-80 bg-secondary/20 rounded-full blur-3xl" aria-hidden="true"></div>
-    <div class="max-w-6xl mx-auto px-4 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center relative">
+<!-- יצירת קשר -->
+<section id="contact" class="bg-brand lines-pattern">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 lg:py-16 text-cream">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
       <div>
-        <span class="anim-fade-up inline-block bg-secondary/15 text-secondary font-bold text-sm px-4 py-1.5 rounded-full mb-5">
-          🏘️ המכולת של שכונת שפירא, רמת גן
-        </span>
-        <h1 class="anim-fade-up anim-delay-1 text-4xl md:text-6xl font-black leading-tight mb-5">
-          המכולת שמרגישה<br><span class="text-primary">כמו בית</span>
-        </h1>
-        <p class="anim-fade-up anim-delay-2 text-lg md:text-xl text-ink/75 leading-relaxed mb-8 max-w-lg">
-          חלב טרי בבוקר, חטיף לדרך, ומישהו שמכיר אתכם בשם ושומר לכם בצד. יאלי בשכונה — ברחוב שפירא 3, במרחק הליכה מהבית.
+        <h2 class="font-heading text-3xl sm:text-4xl mb-3">צריכים משהו? דברו איתנו</h2>
+        <p class="text-cream/85 max-w-md">שיחת טלפון או הודעת וואטסאפ — ונשמור לכם בצד את מה שצריך.</p>
+      </div>
+      <div class="flex flex-wrap gap-3 md:justify-end">
+        <a href="tel:+97236731983" class="flex items-center gap-2 bg-cream text-coffee px-6 py-3 font-medium hover:bg-sun transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          03-673-1983
+        </a>
+        <a href="https://wa.me/97236731983" class="flex items-center gap-2 border-2 border-cream text-cream px-6 py-3 font-medium hover:bg-cream hover:text-coffee transition-colors">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          וואטסאפ
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- פוטר -->
+<footer class="bg-coffee text-cream/80">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="2" y="2" width="44" height="44" rx="10" fill="#E07A2F"/>
+          <text x="24" y="33" text-anchor="middle" font-family="'Secular One', sans-serif" font-size="26" fill="#FBF6EE">י</text>
+        </svg>
+        <span class="font-heading text-lg text-cream">יאלי בשכונה</span>
+      </div>
+      <div class="text-sm space-y-1 sm:text-left">
+        <p class="flex items-center gap-2 sm:justify-end">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          שפירא 3, רמת גן
         </p>
-        <div class="anim-fade-up anim-delay-3 flex flex-wrap gap-4">
-          <a href="tel:+97236731983" class="anim-pulse-cta bg-primary hover:bg-primary/90 text-white font-bold text-lg px-8 py-4 rounded-full transition-colors inline-flex items-center gap-2">
-            📞 התקשרו אלינו עכשיו
-          </a>
-          <a href="https://wa.me/97236731983" target="_blank" rel="noopener" class="bg-secondary hover:bg-secondary/90 text-white font-bold text-lg px-8 py-4 rounded-full transition-colors inline-flex items-center gap-2">
-            💬 שלחו וואטסאפ
-          </a>
-        </div>
-      </div>
-      <div class="hidden md:flex justify-center">
-        <div class="anim-float relative bg-white rounded-3xl shadow-xl p-10 border border-primary/10 rotate-2">
-          <div class="text-8xl text-center mb-4" aria-hidden="true">🧺</div>
-          <p class="text-center font-bold text-xl mb-1">פתוחים בשבילכם</p>
-          <p class="text-center text-ink/60">שפירא 3, רמת גן</p>
-          <div class="absolute -top-5 -right-5 bg-accent text-ink font-black text-sm px-4 py-2 rounded-full shadow-lg -rotate-6">
-            טרי כל יום!
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="bg-white py-20">
-    <div class="max-w-4xl mx-auto px-4 text-center reveal">
-      <span class="text-primary font-bold text-sm tracking-wide">מי אנחנו</span>
-      <h2 class="text-3xl md:text-4xl font-black mt-2 mb-6">שכנים לפני שאנחנו מכולת</h2>
-      <p class="text-lg leading-relaxed text-ink/75">
-        יאלי בשכונה היא המכולת השכונתית שלכם ברחוב שפירא ברמת גן. אצלנו תמצאו את כל מה שצריך ליום-יום —
-        ממוצרי יסוד טריים ועד חטיפים ומוצרי בית — בשירות אישי וחם שמכיר כל לקוח בשם.
-        אנחנו כאן בשבילכם, קרוב לבית, בכל שעה שתצטרכו.
-      </p>
-      <div class="grid grid-cols-3 gap-4 mt-10 max-w-xl mx-auto">
-        <div class="bg-cream rounded-2xl p-4">
-          <div class="text-3xl font-black text-primary">100%</div>
-          <div class="text-sm text-ink/60 font-medium">שירות אישי</div>
-        </div>
-        <div class="bg-cream rounded-2xl p-4">
-          <div class="text-3xl font-black text-secondary">2 דק׳</div>
-          <div class="text-sm text-ink/60 font-medium">הליכה מהבית</div>
-        </div>
-        <div class="bg-cream rounded-2xl p-4">
-          <div class="text-3xl font-black text-accent">כל יום</div>
-          <div class="text-sm text-ink/60 font-medium">סחורה טרייה</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="py-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12 reveal">
-        <span class="text-primary font-bold text-sm tracking-wide">מה תמצאו אצלנו</span>
-        <h2 class="text-3xl md:text-4xl font-black mt-2">כל מה שצריך, קרוב לבית</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="reveal card-lift bg-white rounded-3xl p-7 border border-primary/10 shadow-sm">
-          <div class="service-icon text-5xl mb-4" aria-hidden="true">🥛</div>
-          <h3 class="font-bold text-xl mb-2">מוצרי יסוד יומיומיים</h3>
-          <p class="text-ink/70 leading-relaxed">חלב, לחם, ביצים וכל מה שצריך בבית — תמיד טרי ותמיד זמין.</p>
-        </div>
-        <div class="reveal card-lift bg-white rounded-3xl p-7 border border-primary/10 shadow-sm">
-          <div class="service-icon text-5xl mb-4" aria-hidden="true">🍫</div>
-          <h3 class="font-bold text-xl mb-2">חטיפים ושתייה</h3>
-          <p class="text-ink/70 leading-relaxed">מבחר רחב של חטיפים, שתייה קרה וגלידות לכל המשפחה.</p>
-        </div>
-        <div class="reveal card-lift bg-white rounded-3xl p-7 border border-primary/10 shadow-sm">
-          <div class="service-icon text-5xl mb-4" aria-hidden="true">🧼</div>
-          <h3 class="font-bold text-xl mb-2">מוצרי ניקיון וטואלטיקה</h3>
-          <p class="text-ink/70 leading-relaxed">כל מוצרי הבית הבסיסיים במרחק הליכה מהבית.</p>
-        </div>
-        <div class="reveal card-lift bg-white rounded-3xl p-7 border border-primary/10 shadow-sm">
-          <div class="service-icon text-5xl mb-4" aria-hidden="true">🤝</div>
-          <h3 class="font-bold text-xl mb-2">שירות שכונתי אישי</h3>
-          <p class="text-ink/70 leading-relaxed">מכירים אתכם בשם, שומרים לכם בצד, ותמיד מקבלים בחיוך.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Gallery -->
-  <section id="gallery" class="bg-white py-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12 reveal">
-        <span class="text-primary font-bold text-sm tracking-wide">הצצה לחנות</span>
-        <h2 class="text-3xl md:text-4xl font-black mt-2">קצת מהאווירה אצלנו</h2>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-        <figure class="reveal gallery-tile rounded-3xl overflow-hidden bg-gradient-to-br from-primary to-accent p-8 md:p-12 flex flex-col items-center justify-center text-white aspect-square">
-          <span class="text-6xl md:text-7xl mb-3" aria-hidden="true">🥖</span>
-          <figcaption class="font-bold text-center">לחם ומאפים טריים כל בוקר</figcaption>
-        </figure>
-        <figure class="reveal gallery-tile rounded-3xl overflow-hidden bg-gradient-to-br from-secondary to-secondary/60 p-8 md:p-12 flex flex-col items-center justify-center text-white aspect-square">
-          <span class="text-6xl md:text-7xl mb-3" aria-hidden="true">🥬</span>
-          <figcaption class="font-bold text-center">ירקות ומוצרים טריים על המדף</figcaption>
-        </figure>
-        <figure class="reveal gallery-tile rounded-3xl overflow-hidden bg-gradient-to-br from-accent to-primary/70 p-8 md:p-12 flex flex-col items-center justify-center text-ink aspect-square">
-          <span class="text-6xl md:text-7xl mb-3" aria-hidden="true">🍦</span>
-          <figcaption class="font-bold text-center">מקרר גלידות שהילדים מכירים בעל פה</figcaption>
-        </figure>
-        <figure class="reveal gallery-tile rounded-3xl overflow-hidden bg-gradient-to-br from-ink to-ink/70 p-8 md:p-12 flex flex-col items-center justify-center text-cream aspect-square">
-          <span class="text-6xl md:text-7xl mb-3" aria-hidden="true">☕</span>
-          <figcaption class="font-bold text-center">קפה, תה וכל מה שמעיר את הבוקר</figcaption>
-        </figure>
-        <figure class="reveal gallery-tile rounded-3xl overflow-hidden bg-gradient-to-br from-secondary/80 to-accent p-8 md:p-12 flex flex-col items-center justify-center text-white aspect-square">
-          <span class="text-6xl md:text-7xl mb-3" aria-hidden="true">🧴</span>
-          <figcaption class="font-bold text-center">מדף מוצרי בית וניקיון מסודר תמיד</figcaption>
-        </figure>
-        <figure class="reveal gallery-tile rounded-3xl overflow-hidden bg-gradient-to-br from-primary/80 to-ink/60 p-8 md:p-12 flex flex-col items-center justify-center text-white aspect-square">
-          <span class="text-6xl md:text-7xl mb-3" aria-hidden="true">😊</span>
-          <figcaption class="font-bold text-center">והכי חשוב — חיוך בכניסה וביציאה</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section id="testimonials" class="py-20">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12 reveal">
-        <span class="text-primary font-bold text-sm tracking-wide">שכנים ממליצים</span>
-        <h2 class="text-3xl md:text-4xl font-black mt-2">מה אומרים בשכונה</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        <blockquote class="reveal card-lift bg-white rounded-3xl p-7 border border-primary/10 shadow-sm">
-          <div class="text-accent text-lg mb-3" aria-label="חמישה כוכבים">★★★★★</div>
-          <p class="text-ink/80 leading-relaxed mb-5">"כשנגמר לי החלב בשבע בבוקר, אני יודעת שיאלי כבר פתוח. תמיד עם חיוך, תמיד זוכר מה אני לוקחת. אין דברים כאלה היום."</p>
-          <footer class="font-bold">רותי כהן <span class="block text-sm font-normal text-ink/50">גרה ברחוב שפירא, 12 שנה בשכונה</span></footer>
-        </blockquote>
-        <blockquote class="reveal card-lift bg-white rounded-3xl p-7 border border-primary/10 shadow-sm">
-          <div class="text-accent text-lg mb-3" aria-label="חמישה כוכבים">★★★★★</div>
-          <p class="text-ink/80 leading-relaxed mb-5">"הילדים שלי קופצים לבד לקנות לחם, ואני רגוע — מכירים אותם שם בשם. זו לא סתם מכולת, זה חלק מהשכונה."</p>
-          <footer class="font-bold">אבי לוי <span class="block text-sm font-normal text-ink/50">אבא לשלושה, רמת גן</span></footer>
-        </blockquote>
-        <blockquote class="reveal card-lift bg-white rounded-3xl p-7 border border-primary/10 shadow-sm">
-          <div class="text-accent text-lg mb-3" aria-label="חמישה כוכבים">★★★★★</div>
-          <p class="text-ink/80 leading-relaxed mb-5">"ביקשתי שישמרו לי עיתון ולחמניות בצד — ומאז זה מחכה לי כל בוקר בלי שביקשתי שוב. שירות כמו פעם, באמת."</p>
-          <footer class="font-bold">שרה מזרחי <span class="block text-sm font-normal text-ink/50">פנסיונרית, שכנה ותיקה</span></footer>
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="bg-ink text-cream py-20">
-    <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-      <div class="reveal">
-        <span class="text-accent font-bold text-sm tracking-wide">צרו קשר</span>
-        <h2 class="text-3xl md:text-4xl font-black mt-2 mb-5">מחכים לכם בפינה</h2>
-        <p class="text-cream/80 text-lg leading-relaxed mb-8">
-          צריכים משהו דחוף? רוצים לבדוק אם משהו במלאי? תתקשרו או תשלחו הודעה — עונים מהר, כמו שכנים טובים.
+        <p class="flex items-center gap-2 sm:justify-end">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+97236731983" class="hover:text-cream transition-colors">03-673-1983</a>
         </p>
-        <ul class="space-y-4 text-lg">
-          <li class="flex items-center gap-3">
-            <span class="text-2xl" aria-hidden="true">📍</span>
-            <span>שפירא 3, רמת גן</span>
-          </li>
-          <li class="flex items-center gap-3">
-            <span class="text-2xl" aria-hidden="true">📞</span>
-            <a href="tel:+97236731983" class="hover:text-accent transition-colors font-bold" dir="ltr">03-673-1983</a>
-          </li>
-          <li class="flex items-center gap-3">
-            <span class="text-2xl" aria-hidden="true">✉️</span>
-            <a href="mailto:hello@yali-bashchuna.co.il" class="hover:text-accent transition-colors">hello@yali-bashchuna.co.il</a>
-          </li>
-        </ul>
-      </div>
-      <div class="reveal bg-cream text-ink rounded-3xl p-8 md:p-10 shadow-2xl">
-        <h3 class="font-black text-2xl mb-2">דברו איתנו עכשיו</h3>
-        <p class="text-ink/70 mb-7">שיחה אחת ואנחנו כבר מכינים לכם את ההזמנה בצד.</p>
-        <div class="space-y-4">
-          <a href="tel:+97236731983" class="anim-pulse-cta block bg-primary hover:bg-primary/90 text-white text-center font-bold text-lg px-6 py-4 rounded-2xl transition-colors">
-            📞 התקשרו אלינו עכשיו
-          </a>
-          <a href="https://wa.me/97236731983" target="_blank" rel="noopener" class="block bg-secondary hover:bg-secondary/90 text-white text-center font-bold text-lg px-6 py-4 rounded-2xl transition-colors">
-            💬 כתבו לנו בוואטסאפ
-          </a>
-        </div>
-        <p class="text-center text-sm text-ink/50 mt-5">פתוחים כל ימות השבוע · קרוב לבית · שירות עם חיוך</p>
       </div>
     </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-ink border-t border-cream/10 text-cream/60 py-6 text-center text-sm">
-    <div class="max-w-6xl mx-auto px-4">
-      <p class="font-bold text-cream mb-1">יאלי בשכונה 🛒 המכולת שמרגישה כמו בית</p>
-      <p>שפירא 3, רמת גן · <a href="tel:+97236731983" class="hover:text-accent transition-colors" dir="ltr">03-673-1983</a></p>
-    </div>
-  </footer>
+  </div>
+</footer>
 
 </body>
 </html>

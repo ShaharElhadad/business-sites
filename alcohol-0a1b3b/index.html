@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>משקאות ג'וני — הכתובת שלכם לעולם המשקאות | שדרות דב הוז 15</title>
+<meta name="description" content="משקאות ג'וני — חנות משקאות בשדרות דב הוז 15: יינות, וויסקי, אלכוהול פרימיום ומארזי שי. שירות אישי וחם. התקשרו 03-5032439.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#3E2723',
+          secondary: '#8D6E63',
+          accent: '#D4A24E',
+          cream: '#FAF6F0',
+          ink: '#2B211C'
+        },
+        fontFamily: {
+          heebo: ['Heebo', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Heebo', sans-serif; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+  }
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+  }
+  @keyframes pulseRing {
+    0%   { box-shadow: 0 0 0 0 rgba(212, 162, 78, 0.45); }
+    70%  { box-shadow: 0 0 0 16px rgba(212, 162, 78, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 162, 78, 0); }
+  }
+
+  .anim-fade-up   { animation: fadeUp 0.9s ease-out both; }
+  .anim-fade-in   { animation: fadeIn 1.2s ease-out both; }
+  .anim-float     { animation: floaty 5s ease-in-out infinite; }
+  .anim-pulse-cta { animation: pulseRing 2.4s ease-out infinite; }
+
+  .delay-1 { animation-delay: .15s; }
+  .delay-2 { animation-delay: .3s; }
+  .delay-3 { animation-delay: .45s; }
+  .delay-4 { animation-delay: .6s; }
+
+  .gold-text {
+    background: linear-gradient(90deg, #D4A24E, #f3d28d, #D4A24E);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 6s linear infinite;
+  }
+
+  .card-lift { transition: transform .35s ease, box-shadow .35s ease; }
+  .card-lift:hover { transform: translateY(-8px); box-shadow: 0 22px 45px -18px rgba(62, 39, 35, 0.35); }
+
+  .gallery-tile { transition: transform .4s ease; }
+  .gallery-tile:hover { transform: scale(1.04); }
+
+  /* scroll-reveal עדין מבוסס CSS בלבד */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: fadeUp 1s ease-out both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+</style>
+</head>
+<body class="bg-cream text-ink font-heebo antialiased">
+
+  <!-- ניווט -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-primary/95 backdrop-blur border-b border-accent/30">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#hero" class="flex items-center gap-2 text-cream">
+        <span class="text-2xl">🥃</span>
+        <span class="text-xl font-extrabold tracking-tight">משקאות <span class="gold-text">ג'וני</span></span>
+      </a>
+      <ul class="hidden md:flex items-center gap-6 text-sm text-cream/90">
+        <li><a href="#about" class="hover:text-accent transition-colors">אודות</a></li>
+        <li><a href="#services" class="hover:text-accent transition-colors">השירותים שלנו</a></li>
+        <li><a href="#gallery" class="hover:text-accent transition-colors">גלריה</a></li>
+        <li><a href="#testimonials" class="hover:text-accent transition-colors">לקוחות ממליצים</a></li>
+        <li><a href="#contact" class="hover:text-accent transition-colors">צרו קשר</a></li>
+      </ul>
+      <a href="tel:+97235032439" class="bg-accent text-primary font-bold text-sm px-4 py-2 rounded-full hover:brightness-110 transition">
+        03-5032439 ☎
+      </a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary pt-20">
+    <div class="absolute inset-0 opacity-20 anim-fade-in"
+         style="background-image: radial-gradient(circle at 20% 30%, #8D6E63 0, transparent 40%), radial-gradient(circle at 80% 70%, #D4A24E 0, transparent 35%), radial-gradient(circle at 60% 20%, #8D6E63 0, transparent 30%);"></div>
+    <div class="absolute top-24 right-10 text-6xl anim-float opacity-30 select-none" aria-hidden="true">🍷</div>
+    <div class="absolute bottom-24 left-10 text-6xl anim-float opacity-30 select-none" style="animation-delay:1.2s" aria-hidden="true">🥂</div>
+
+    <div class="relative z-10 text-center px-4 max-w-3xl mx-auto">
+      <p class="text-accent font-medium tracking-widest mb-4 anim-fade-up">חנות משקאות חריפים ויינות · שדרות דב הוז 15</p>
+      <h1 class="text-4xl sm:text-6xl font-black text-cream leading-tight mb-6 anim-fade-up delay-1">
+        הכתובת שלכם<br><span class="gold-text">לעולם המשקאות</span>
+      </h1>
+      <p class="text-cream/80 text-lg sm:text-xl mb-10 anim-fade-up delay-2">
+        יינות משובחים, וויסקי נבחר ומארזי שי מעוצבים — עם שירות אישי וחם, כמו שרק חנות שכונתית עם נשמה יודעת לתת.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center anim-fade-up delay-3">
+        <a href="#contact" class="anim-pulse-cta bg-accent text-primary text-lg font-bold px-8 py-4 rounded-full hover:brightness-110 transition">
+          בקרו אותנו או התקשרו עכשיו
+        </a>
+        <a href="https://wa.me/97235032439" target="_blank" rel="noopener noreferrer"
+           class="border-2 border-accent text-accent text-lg font-bold px-8 py-4 rounded-full hover:bg-accent hover:text-primary transition">
+          שלחו וואטסאפ 💬
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- אודות -->
+  <section id="about" class="py-24 px-4">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <div class="reveal">
+        <p class="text-secondary font-bold tracking-widest mb-2">מי אנחנו</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-primary mb-6">חנות שכונתית עם נשמה</h2>
+        <p class="leading-relaxed text-lg mb-4">
+          משקאות ג'וני היא חנות משקאות שכונתית עם נשמה, שבה תמצאו מבחר עשיר של יינות, וויסקי ואלכוהול מכל העולם — לצד שירות אישי וחם.
+        </p>
+        <p class="leading-relaxed text-lg mb-6">
+          אנחנו מאמינים שלכל אירוע ולכל אדם יש את המשקה המושלם, ואנחנו כאן כדי לעזור לכם למצוא אותו. בין אם אתם חובבי וויסקי ותיקים, מחפשים יין לערב מיוחד או רוצים מתנה שתעשה רושם — מחכים לכם בשדרות דב הוז 15.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <span class="bg-secondary/15 text-primary px-4 py-2 rounded-full text-sm font-medium">🍇 יינות מהארץ ומהעולם</span>
+          <span class="bg-secondary/15 text-primary px-4 py-2 rounded-full text-sm font-medium">🥃 וויסקי פרימיום</span>
+          <span class="bg-secondary/15 text-primary px-4 py-2 rounded-full text-sm font-medium">🎁 מארזי שי</span>
+        </div>
+      </div>
+      <div class="reveal grid grid-cols-2 gap-4">
+        <div class="bg-primary text-cream rounded-2xl p-6 text-center card-lift">
+          <div class="text-4xl mb-2">🍷</div>
+          <div class="font-extrabold text-2xl gold-text">מאות</div>
+          <div class="text-cream/80 text-sm">סוגי יינות במלאי</div>
+        </div>
+        <div class="bg-secondary text-cream rounded-2xl p-6 text-center card-lift mt-6">
+          <div class="text-4xl mb-2">🌍</div>
+          <div class="font-extrabold text-2xl">מכל העולם</div>
+          <div class="text-cream/80 text-sm">מותגים נבחרים</div>
+        </div>
+        <div class="bg-accent text-primary rounded-2xl p-6 text-center card-lift">
+          <div class="text-4xl mb-2">🤝</div>
+          <div class="font-extrabold text-2xl">שירות אישי</div>
+          <div class="text-primary/80 text-sm">יחס חם לכל לקוח</div>
+        </div>
+        <div class="bg-primary text-cream rounded-2xl p-6 text-center card-lift mt-6">
+          <div class="text-4xl mb-2">📍</div>
+          <div class="font-extrabold text-xl gold-text">דב הוז 15</div>
+          <div class="text-cream/80 text-sm">קל להגיע, כיף להישאר</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- שירותים -->
+  <section id="services" class="py-24 px-4 bg-primary">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="text-accent font-bold tracking-widest mb-2">מה תמצאו אצלנו</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-cream">השירותים שלנו</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="reveal card-lift bg-cream rounded-2xl p-8">
+          <div class="text-4xl mb-4">🍇</div>
+          <h3 class="text-xl font-bold text-primary mb-3">מבחר יינות מהארץ ומהעולם</h3>
+          <p class="text-ink/80 leading-relaxed">יינות אדומים, לבנים ומבעבעים ממיטב היקבים, עם התאמה אישית לכל טעם ותקציב.</p>
+        </div>
+        <div class="reveal card-lift bg-cream rounded-2xl p-8">
+          <div class="text-4xl mb-4">🥃</div>
+          <h3 class="text-xl font-bold text-primary mb-3">וויסקי ואלכוהול פרימיום</h3>
+          <p class="text-ink/80 leading-relaxed">מגוון רחב של וויסקי, וודקה, ג'ין, רום וליקרים — כולל מהדורות מיוחדות.</p>
+        </div>
+        <div class="reveal card-lift bg-cream rounded-2xl p-8">
+          <div class="text-4xl mb-4">🎁</div>
+          <h3 class="text-xl font-bold text-primary mb-3">מארזי שי ומתנות</h3>
+          <p class="text-ink/80 leading-relaxed">מארזים מעוצבים לכל אירוע — ימי הולדת, חגים ואירועים עסקיים.</p>
+        </div>
+        <div class="reveal card-lift bg-cream rounded-2xl p-8">
+          <div class="text-4xl mb-4">🥂</div>
+          <h3 class="text-xl font-bold text-primary mb-3">משקאות לאירועים</h3>
+          <p class="text-ink/80 leading-relaxed">ייעוץ והרכבת הזמנה לאירועים פרטיים ועסקיים, בכמויות ובמחירים משתלמים.</p>
+        </div>
+        <div class="reveal card-lift bg-cream rounded-2xl p-8">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="text-xl font-bold text-primary mb-3">ייעוץ אישי בחנות</h3>
+          <p class="text-ink/80 leading-relaxed">צוות מקצועי שישמח להמליץ על המשקה המתאים בדיוק בשבילכם.</p>
+        </div>
+        <div class="reveal card-lift bg-accent rounded-2xl p-8 flex flex-col justify-center">
+          <h3 class="text-xl font-extrabold text-primary mb-3">לא בטוחים מה לבחור?</h3>
+          <p class="text-primary/85 leading-relaxed mb-5">ספרו לנו על האירוע או על האדם — ונמצא יחד את הבקבוק המושלם.</p>
+          <a href="tel:+97235032439" class="bg-primary text-cream font-bold px-6 py-3 rounded-full text-center hover:brightness-125 transition">התקשרו 03-5032439</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- גלריה -->
+  <section id="gallery" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="text-secondary font-bold tracking-widest mb-2">הצצה לחנות</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-primary">גלריה</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="reveal gallery-tile rounded-2xl h-56 md:h-64 flex flex-col items-center justify-center text-cream overflow-hidden"
+             style="background: linear-gradient(135deg, #3E2723, #5d4037);">
+          <span class="text-6xl mb-2" aria-hidden="true">🍷</span>
+          <span class="font-bold">פינת היינות האדומים</span>
+        </div>
+        <div class="reveal gallery-tile rounded-2xl h-56 md:h-64 flex flex-col items-center justify-center text-primary overflow-hidden"
+             style="background: linear-gradient(135deg, #D4A24E, #e8c684);">
+          <span class="text-6xl mb-2" aria-hidden="true">🥃</span>
+          <span class="font-bold">מדף הוויסקי הנבחר</span>
+        </div>
+        <div class="reveal gallery-tile rounded-2xl h-56 md:h-64 flex flex-col items-center justify-center text-cream overflow-hidden"
+             style="background: linear-gradient(135deg, #8D6E63, #a1887f);">
+          <span class="text-6xl mb-2" aria-hidden="true">🍾</span>
+          <span class="font-bold">מבעבעים ושמפניות</span>
+        </div>
+        <div class="reveal gallery-tile rounded-2xl h-56 md:h-64 flex flex-col items-center justify-center text-cream overflow-hidden"
+             style="background: linear-gradient(135deg, #5d4037, #8D6E63);">
+          <span class="text-6xl mb-2" aria-hidden="true">🎁</span>
+          <span class="font-bold">מארזי שי מעוצבים</span>
+        </div>
+        <div class="reveal gallery-tile rounded-2xl h-56 md:h-64 flex flex-col items-center justify-center text-primary overflow-hidden"
+             style="background: linear-gradient(135deg, #e8c684, #D4A24E);">
+          <span class="text-6xl mb-2" aria-hidden="true">🍸</span>
+          <span class="font-bold">ג'ין, וודקה וליקרים</span>
+        </div>
+        <div class="reveal gallery-tile rounded-2xl h-56 md:h-64 flex flex-col items-center justify-center text-cream overflow-hidden"
+             style="background: linear-gradient(135deg, #2B211C, #3E2723);">
+          <span class="text-6xl mb-2" aria-hidden="true">🥂</span>
+          <span class="font-bold">הכנות לאירוע שלכם</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- המלצות -->
+  <section id="testimonials" class="py-24 px-4 bg-secondary/10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <p class="text-secondary font-bold tracking-widest mb-2">מה אומרים עלינו</p>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-primary">לקוחות ממליצים</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="reveal card-lift bg-white rounded-2xl p-8 border-t-4 border-accent">
+          <div class="text-accent text-lg mb-3" aria-label="חמישה כוכבים">★★★★★</div>
+          <blockquote class="leading-relaxed mb-5">"חיפשתי וויסקי מיוחד למתנה לאבא שלי. ג'וני הקדיש לי רבע שעה, שאל שאלות והמליץ על בקבוק מדויק — אבא שלי עוד מדבר על זה."</blockquote>
+          <figcaption class="font-bold text-primary">אבי כהן <span class="block text-sm font-normal text-ink/60">לקוח קבוע</span></figcaption>
+        </figure>
+        <figure class="reveal card-lift bg-white rounded-2xl p-8 border-t-4 border-accent">
+          <div class="text-accent text-lg mb-3" aria-label="חמישה כוכבים">★★★★★</div>
+          <blockquote class="leading-relaxed mb-5">"הזמנו דרכם את כל המשקאות לחתונה. קיבלנו ייעוץ, מחיר הוגן והכול הגיע מסודר ובזמן. שירות שכבר לא רואים בכל מקום."</blockquote>
+          <figcaption class="font-bold text-primary">מיכל ויואב <span class="block text-sm font-normal text-ink/60">חגגו אצלנו אירוע</span></figcaption>
+        </figure>
+        <figure class="reveal card-lift bg-white rounded-2xl p-8 border-t-4 border-accent">
+          <div class="text-accent text-lg mb-3" aria-label="חמישה כוכבים">★★★★★</div>
+          <blockquote class="leading-relaxed mb-5">"מארזי השי שלהם הצילו אותי לקראת ראש השנה — הזמנתי לכל הספקים של המשרד, וכולם התקשרו להגיד תודה. ממליצה בחום."</blockquote>
+          <figcaption class="font-bold text-primary">דנה לוי <span class="block text-sm font-normal text-ink/60">מנהלת משרד</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- צור קשר -->
+  <section id="contact" class="py-24 px-4 bg-primary relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10"
+         style="background-image: radial-gradient(circle at 80% 20%, #D4A24E 0, transparent 40%), radial-gradient(circle at 10% 80%, #8D6E63 0, transparent 40%);"></div>
+    <div class="relative max-w-4xl mx-auto text-center">
+      <p class="text-accent font-bold tracking-widest mb-2 reveal">מחכים לכם</p>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-cream mb-6 reveal">בואו לבקר או דברו איתנו</h2>
+      <p class="text-cream/80 text-lg mb-10 max-w-2xl mx-auto reveal">
+        נמצאים בשדרות דב הוז 15 — קפצו להתרשם מהמבחר, או התקשרו ונשמח לייעץ, להכין מארז או להרכיב הזמנה לאירוע.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 reveal">
+        <a href="tel:+97235032439"
+           class="anim-pulse-cta bg-accent text-primary text-lg font-bold px-8 py-4 rounded-full hover:brightness-110 transition">
+          ☎ התקשרו עכשיו: 03-5032439
+        </a>
+        <a href="https://wa.me/97235032439" target="_blank" rel="noopener noreferrer"
+           class="bg-[#25D366] text-white text-lg font-bold px-8 py-4 rounded-full hover:brightness-110 transition">
+          💬 כתבו לנו בוואטסאפ
+        </a>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-6 text-cream reveal">
+        <div class="bg-white/5 border border-accent/30 rounded-2xl p-6">
+          <div class="text-3xl mb-2">📍</div>
+          <h3 class="font-bold mb-1">כתובת</h3>
+          <p class="text-cream/80">שדרות דב הוז 15</p>
+        </div>
+        <div class="bg-white/5 border border-accent/30 rounded-2xl p-6">
+          <div class="text-3xl mb-2">☎</div>
+          <h3 class="font-bold mb-1">טלפון</h3>
+          <p class="text-cream/80"><a href="tel:+97235032439" class="hover:text-accent transition">03-5032439</a></p>
+        </div>
+        <div class="bg-white/5 border border-accent/30 rounded-2xl p-6">
+          <div class="text-3xl mb-2">💬</div>
+          <h3 class="font-bold mb-1">וואטסאפ</h3>
+          <p class="text-cream/80"><a href="https://wa.me/97235032439" target="_blank" rel="noopener noreferrer" class="hover:text-accent transition">שלחו הודעה ונחזור אליכם</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- פוטר -->
+  <footer class="bg-ink text-cream/70 py-8 px-4 text-center text-sm">
+    <p class="mb-2 font-bold text-cream">משקאות ג'וני · הכתובת שלכם לעולם המשקאות</p>
+    <p class="mb-3">שדרות דב הוז 15 · <a href="tel:+97235032439" class="text-accent hover:brightness-110">03-5032439</a></p>
+    <p class="text-cream/50">המכירה למבוגרים מגיל 18 ומעלה בלבד. צריכה מופרזת של אלכוהול מסכנת חיים — מומלץ להימנע משתייה מופרזת.</p>
+  </footer>
+
+</body>
+</html>

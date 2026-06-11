@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="המרכז לבית – חנות עשה זאת בעצמך: כלי עבודה, חומרי בניין, פרזול וייעוץ מקצועי לשיפוץ ולתחזוקת הבית. רחוב אודם 21, טל׳ 089718990.">
+  <title>המרכז לבית | חנות עשה זאת בעצמך וכלי עבודה</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1F3A5F',
+            secondary: '#E8EEF4',
+            accent: '#F2842B',
+            ink: '#1E2530'
+          },
+          fontFamily: {
+            heebo: ['Heebo', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Heebo', sans-serif; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes floatSoft {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
+    }
+    @keyframes pulseRing {
+      0%   { box-shadow: 0 0 0 0 rgba(242, 132, 43, 0.45); }
+      70%  { box-shadow: 0 0 0 14px rgba(242, 132, 43, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(242, 132, 43, 0); }
+    }
+
+    .anim-fade-up { animation: fadeUp 0.8s ease-out both; }
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
+    .delay-3 { animation-delay: 0.45s; }
+    .delay-4 { animation-delay: 0.6s; }
+
+    .float-soft { animation: floatSoft 5s ease-in-out infinite; }
+    .pulse-cta  { animation: pulseRing 2.5s ease-out infinite; }
+
+    .card-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+    .card-lift:hover { transform: translateY(-6px); box-shadow: 0 18px 35px -12px rgba(31, 58, 95, 0.25); }
+
+    .gallery-tile { transition: transform 0.4s ease; }
+    .gallery-tile:hover { transform: scale(1.03); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .anim-fade-up, .float-soft, .pulse-cta { animation: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-ink font-heebo antialiased">
+
+  <!-- ניווט -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-secondary">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2">
+        <span class="w-10 h-10 rounded-xl bg-primary text-white grid place-items-center text-xl font-extrabold">מ</span>
+        <span class="text-lg font-extrabold text-primary">המרכז לבית</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#about" class="hover:text-accent transition-colors">אודות</a>
+        <a href="#services" class="hover:text-accent transition-colors">המחלקות שלנו</a>
+        <a href="#gallery" class="hover:text-accent transition-colors">גלריה</a>
+        <a href="#testimonials" class="hover:text-accent transition-colors">לקוחות ממליצים</a>
+        <a href="#contact" class="hover:text-accent transition-colors">צור קשר</a>
+      </nav>
+      <a href="tel:089718990" class="bg-accent text-white text-sm font-bold px-4 py-2 rounded-full hover:bg-orange-600 transition-colors">
+        08-9718990
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero" class="relative overflow-hidden bg-gradient-to-bl from-primary via-[#27486f] to-[#16293f] text-white">
+    <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-accent/20 blur-3xl float-soft" aria-hidden="true"></div>
+    <div class="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-white/5 blur-2xl" aria-hidden="true"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 py-24 md:py-32 text-center">
+      <p class="anim-fade-up text-accent font-bold tracking-wide mb-4">חנות עשה זאת בעצמך · רחוב אודם 21</p>
+      <h1 class="anim-fade-up delay-1 text-4xl md:text-6xl font-black leading-tight mb-6">
+        כל מה שהבית שלכם צריך,<br class="hidden md:block"> במקום אחד
+      </h1>
+      <p class="anim-fade-up delay-2 max-w-2xl mx-auto text-lg md:text-xl text-secondary/90 mb-10">
+        כלי עבודה, חומרי בניין, פרזול וייעוץ מקצועי — לבעלי בתים, שיפוצניקים חובבים ואנשי מקצוע.
+        נכנסים עם רעיון, יוצאים עם פתרון ביד.
+      </p>
+      <div class="anim-fade-up delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#contact" class="pulse-cta bg-accent hover:bg-orange-600 transition-colors text-white text-lg font-bold px-8 py-4 rounded-full shadow-lg">
+          דברו איתנו עוד היום
+        </a>
+        <a href="https://wa.me/97289718990" target="_blank" rel="noopener noreferrer"
+           class="bg-white/10 hover:bg-white/20 border border-white/30 transition-colors text-white font-bold px-6 py-4 rounded-full">
+          ✆ וואטסאפ: שלחו לנו הודעה
+        </a>
+      </div>
+      <div class="anim-fade-up delay-4 mt-14 grid grid-cols-3 gap-4 max-w-xl mx-auto text-center">
+        <div>
+          <p class="text-3xl font-black text-accent">4</p>
+          <p class="text-sm text-secondary/80">מחלקות מקצועיות</p>
+        </div>
+        <div>
+          <p class="text-3xl font-black text-accent">1,000+</p>
+          <p class="text-sm text-secondary/80">פריטים במלאי</p>
+        </div>
+        <div>
+          <p class="text-3xl font-black text-accent">100%</p>
+          <p class="text-sm text-secondary/80">שירות מכל הלב</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- אודות -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="text-accent font-bold mb-2">מי אנחנו</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-primary mb-6">הבית של כל מי שאוהב לעשות בעצמו</h2>
+        <p class="text-lg leading-relaxed mb-4">
+          המרכז לבית הוא חנות עשה זאת בעצמך שמרכזת תחת קורת גג אחת את כל מה שצריך לתחזוקה, שיפוץ ושדרוג הבית.
+        </p>
+        <p class="text-lg leading-relaxed mb-6">
+          אנחנו מאמינים שכל אחד יכול לבצע בעצמו, ולכן לצד מבחר רחב של כלים וחומרים תקבלו אצלנו גם ייעוץ אישי
+          ושירות מכל הלב. בואו לבקר אותנו ברחוב אודם 21 — ותצאו עם פתרון ביד.
+        </p>
+        <ul class="space-y-3 text-base">
+          <li class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-full bg-secondary text-primary grid place-items-center font-bold">✓</span>
+            מותגים מובילים במחירים הוגנים
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-full bg-secondary text-primary grid place-items-center font-bold">✓</span>
+            צוות מנוסה שמדבר בגובה העיניים
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-full bg-secondary text-primary grid place-items-center font-bold">✓</span>
+            פתרון לכל פרויקט — מתיקון קטן ועד שיפוץ מלא
+          </li>
+        </ul>
+      </div>
+      <div class="relative">
+        <div class="absolute inset-0 translate-x-4 translate-y-4 rounded-3xl bg-secondary" aria-hidden="true"></div>
+        <div class="relative rounded-3xl bg-gradient-to-bl from-primary to-[#2c4d77] text-white p-10 card-lift">
+          <p class="text-5xl mb-4" aria-hidden="true">🛠️</p>
+          <h3 class="text-2xl font-extrabold mb-3">"כל אחד יכול לבצע בעצמו"</h3>
+          <p class="text-secondary/90 leading-relaxed">
+            זו לא רק סיסמה — זו הדרך שלנו. לפני שאתם קונים, אנחנו מקשיבים: מה הפרויקט, מה התקציב, מה הניסיון שלכם.
+            רק אז ממליצים על הכלי והחומר הנכונים, ומסבירים בדיוק איך לעבוד איתם.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- שירותים -->
+  <section id="services" class="py-20 bg-secondary">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-accent font-bold mb-2">המחלקות שלנו</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-primary">כל מה שצריך לפרויקט הבא שלכם</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card-lift bg-white rounded-2xl p-7 border border-white shadow-sm">
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white grid place-items-center text-2xl mb-5" aria-hidden="true">🔧</div>
+          <h3 class="text-xl font-extrabold text-primary mb-2">כלי עבודה</h3>
+          <p class="leading-relaxed">מבחר רחב של כלי עבודה ידניים וחשמליים מהמותגים המובילים.</p>
+        </div>
+        <div class="card-lift bg-white rounded-2xl p-7 border border-white shadow-sm">
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white grid place-items-center text-2xl mb-5" aria-hidden="true">🧱</div>
+          <h3 class="text-xl font-extrabold text-primary mb-2">חומרי בניין ושיפוץ</h3>
+          <p class="leading-relaxed">כל החומרים לשיפוץ קטן או גדול — צבעים, דבקים, איטום וגבס.</p>
+        </div>
+        <div class="card-lift bg-white rounded-2xl p-7 border border-white shadow-sm">
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white grid place-items-center text-2xl mb-5" aria-hidden="true">🔩</div>
+          <h3 class="text-xl font-extrabold text-primary mb-2">פרזול ואביזרים לבית</h3>
+          <p class="leading-relaxed">ברגים, ידיות, מנעולים וכל הפריטים הקטנים שעושים את ההבדל.</p>
+        </div>
+        <div class="card-lift bg-white rounded-2xl p-7 border border-white shadow-sm">
+          <div class="w-14 h-14 rounded-2xl bg-accent text-white grid place-items-center text-2xl mb-5" aria-hidden="true">💬</div>
+          <h3 class="text-xl font-extrabold text-primary mb-2">ייעוץ מקצועי</h3>
+          <p class="leading-relaxed">צוות מנוסה שילווה אתכם בבחירת הפתרון הנכון לכל פרויקט.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- גלריה -->
+  <section id="gallery" class="py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-accent font-bold mb-2">הצצה לחנות</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-primary">מסתובבים בין המדפים</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="gallery-tile rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-bl from-primary to-[#3a5d8a] text-white p-6 flex flex-col justify-end">
+          <p class="text-4xl mb-2" aria-hidden="true">🪚</p>
+          <p class="font-bold">קיר כלי העבודה החשמליים</p>
+        </div>
+        <div class="gallery-tile rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-bl from-accent to-orange-400 text-white p-6 flex flex-col justify-end">
+          <p class="text-4xl mb-2" aria-hidden="true">🎨</p>
+          <p class="font-bold">מחלקת הצבעים והגימור</p>
+        </div>
+        <div class="gallery-tile rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-bl from-[#2c4d77] to-primary text-white p-6 flex flex-col justify-end">
+          <p class="text-4xl mb-2" aria-hidden="true">🗝️</p>
+          <p class="font-bold">פינת הפרזול והמנעולים</p>
+        </div>
+        <div class="gallery-tile rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-bl from-ink to-[#3a4456] text-white p-6 flex flex-col justify-end">
+          <p class="text-4xl mb-2" aria-hidden="true">📏</p>
+          <p class="font-bold">כלי מדידה ועבודה ידנית</p>
+        </div>
+        <div class="gallery-tile rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-bl from-[#5b7ba3] to-primary text-white p-6 flex flex-col justify-end">
+          <p class="text-4xl mb-2" aria-hidden="true">🧴</p>
+          <p class="font-bold">דבקים, איטום וחומרי בניין</p>
+        </div>
+        <div class="gallery-tile rounded-2xl overflow-hidden aspect-[4/3] bg-gradient-to-bl from-orange-500 to-accent text-white p-6 flex flex-col justify-end">
+          <p class="text-4xl mb-2" aria-hidden="true">🤝</p>
+          <p class="font-bold">דלפק הייעוץ — תמיד יש את מי לשאול</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- המלצות -->
+  <section id="testimonials" class="py-20 bg-secondary">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-accent font-bold mb-2">לקוחות ממליצים</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-primary">מה אומרים עלינו</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <figure class="card-lift bg-white rounded-2xl p-7 shadow-sm">
+          <p class="text-accent text-lg mb-3" aria-hidden="true">★★★★★</p>
+          <blockquote class="leading-relaxed mb-5">
+            "באתי לתקן ברז מטפטף בלי מושג מאיפה להתחיל. יצאתי עם החלקים הנכונים והסבר מסודר — תיקנתי בעצמי תוך חצי שעה."
+          </blockquote>
+          <figcaption class="font-bold text-primary">יוסי, בעל דירה</figcaption>
+        </figure>
+        <figure class="card-lift bg-white rounded-2xl p-7 shadow-sm">
+          <p class="text-accent text-lg mb-3" aria-hidden="true">★★★★★</p>
+          <blockquote class="leading-relaxed mb-5">
+            "אני שיפוצניק במקצועי, ופה אני מוצא הכול במקום אחד: ברגים, דבקים, כלים. חוסך לי נסיעות וזמן יקר בין ספקים."
+          </blockquote>
+          <figcaption class="font-bold text-primary">מאור, קבלן שיפוצים</figcaption>
+        </figure>
+        <figure class="card-lift bg-white rounded-2xl p-7 shadow-sm">
+          <p class="text-accent text-lg mb-3" aria-hidden="true">★★★★★</p>
+          <blockquote class="leading-relaxed mb-5">
+            "צבענו את הסלון בפעם הראשונה לבד. בחנות התאימו לנו צבע, גלילים ומסקנטייפ — והסבירו בדיוק באיזה סדר לעבוד. תוצאה מושלמת."
+          </blockquote>
+          <figcaption class="font-bold text-primary">דנה ועומר, זוג צעיר</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- צור קשר -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <p class="text-accent font-bold mb-2">בואו לבקר</p>
+      <h2 class="text-3xl md:text-4xl font-extrabold text-primary mb-4">מחכים לכם ברחוב אודם 21</h2>
+      <p class="text-lg max-w-2xl mx-auto mb-10">
+        יש לכם שאלה על פרויקט? לא בטוחים איזה כלי מתאים? התקשרו, שלחו וואטסאפ או פשוט קפצו אלינו —
+        נשמח לעזור לכם לצאת עם פתרון ביד.
+      </p>
+
+      <div class="grid sm:grid-cols-3 gap-5 mb-10">
+        <a href="tel:089718990" class="card-lift block bg-secondary rounded-2xl p-7">
+          <p class="text-3xl mb-3" aria-hidden="true">📞</p>
+          <p class="font-extrabold text-primary mb-1">טלפון</p>
+          <p class="font-medium" dir="ltr">08-9718990</p>
+        </a>
+        <a href="https://wa.me/97289718990" target="_blank" rel="noopener noreferrer" class="card-lift block bg-secondary rounded-2xl p-7">
+          <p class="text-3xl mb-3" aria-hidden="true">💬</p>
+          <p class="font-extrabold text-primary mb-1">וואטסאפ</p>
+          <p class="font-medium">שלחו הודעה ונחזור אליכם</p>
+        </a>
+        <div class="card-lift bg-secondary rounded-2xl p-7">
+          <p class="text-3xl mb-3" aria-hidden="true">📍</p>
+          <p class="font-extrabold text-primary mb-1">כתובת</p>
+          <p class="font-medium">רחוב אודם 21</p>
+        </div>
+      </div>
+
+      <a href="tel:089718990" class="pulse-cta inline-block bg-accent hover:bg-orange-600 transition-colors text-white text-lg font-bold px-10 py-4 rounded-full shadow-lg">
+        דברו איתנו עוד היום
+      </a>
+    </div>
+  </section>
+
+  <!-- פוטר -->
+  <footer class="bg-primary text-secondary/90">
+    <div class="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <p class="font-bold text-white">המרכז לבית · חנות עשה זאת בעצמך וכלי עבודה</p>
+      <p>רחוב אודם 21 · <a href="tel:089718990" class="underline hover:text-accent transition-colors" dir="ltr">08-9718990</a></p>
+      <p>כל הזכויות שמורות © המרכז לבית</p>
+    </div>
+  </footer>
+
+</body>
+</html>
